@@ -6,6 +6,21 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        sassOptions: {
+          sassRuleTest: /\.global\.css$/,
+          sassRuleModulesTest: /\.module\.css$/,
+          useResolveUrlLoader: true,
+        },
+        useResolveUrlLoader: {
+          options: {
+            sourceMap: true,
+          },
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {

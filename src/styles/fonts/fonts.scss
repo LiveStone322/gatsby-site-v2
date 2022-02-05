@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'OpenSans';
+  src: url('./OpenSans-Regular.ttf');
+  src: local('Open Sans'), local('OpenSans-Regular'), 
+    url('./OpenSans-Regular.woff') format('woff'),
+    url('./OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('./Oswald-SemiBold.ttf');
+  src: url('./Oswald-SemiBold.woff') format('woff'),
+    url('./Oswald-SemiBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
