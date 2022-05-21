@@ -1,0 +1,7 @@
+@use "../../styles/constants.scss" as c;
+
+.main {
+  @media (min-width: map-get(c.$grid-breakpoints, "md")) {
+    padding-top: 4em;
+  }
+}

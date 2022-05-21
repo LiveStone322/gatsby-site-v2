@@ -1,0 +1,36 @@
+@use "../../styles/constants.scss" as c;
+@use "../../styles/mixins/" as m;
+
+.container-fluid {
+  min-height: 70vh;
+  display: flex;
+}
+
+.container {
+  margin: auto;
+  max-width: map-get($map: c.$grid-breakpoints, $key: "lg");
+}
+
+.right-part {
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: map-get(c.$grid-breakpoints, "md")) {
+    padding-top: 2em;
+  }
+}
+
+.left-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+
+  @media (max-width: map-get(c.$grid-breakpoints, "md")) {
+    align-items: center;
+  }
+
+  p {
+    @include m.fastFluidFontSize(1rem, 1.5rem);
+  }
+}

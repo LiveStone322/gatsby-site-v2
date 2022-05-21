@@ -1,0 +1,47 @@
+@use "../../../../styles/constants.scss" as c;
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  margin: 2px 0 0 0;
+
+  @media (min-width: map-get(c.$grid-breakpoints, "md")) {
+    width: 100%;
+  }
+
+  ul {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    gap: 2em;
+
+    li {
+      font-size: 1rem;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        position: relative;
+        &::after {
+          transition: all 0.1s ease-out;
+          content: "";
+          position: absolute;
+          height: 2px;
+          bottom: -4px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          background-color: black;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

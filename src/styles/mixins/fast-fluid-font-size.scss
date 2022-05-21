@@ -1,0 +1,27 @@
+@use "../constants.scss" as c;
+
+@mixin fastFluidFontSize($f-min, $f-max) {
+  $step: calc(($f-max - $f-min) / 3);
+  $f-sm: $f-max - 2 * $step;
+  $f-md: $f-max - 1 * $step;
+
+  // Small devices (landscape phones, 576px and up)
+  @media (max-width: 768px) {
+    font-size: #{$f-min};
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    font-size: #{$f-sm};
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    font-size: #{$f-md};
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    font-size: #{$f-max};
+  }
+}

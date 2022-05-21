@@ -1,0 +1,16 @@
+@use "../../styles/constants.scss" as c;
+
+header {
+  position: fixed;
+  z-index: 2;
+  @media (max-width: map-get(c.$grid-breakpoints, "md") - 1) {
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  @media (min-width: map-get(c.$grid-breakpoints, "md")) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

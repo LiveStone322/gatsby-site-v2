@@ -1,0 +1,8 @@
+@import "./shadow.scss";
+
+@mixin card($color: #eeeeee) {
+  border-radius: 7px;
+  background: rgba($color, 0.6);
+  backdrop-filter: blur(10px);
+  @include shadow();
+}

@@ -1,0 +1,14 @@
+@use "../../styles/mixins/" as m;
+
+.section {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  @include m.card(#f9f9f9);
+
+  h2 {
+    text-align: center;
+  }
+}

@@ -1,0 +1,18 @@
+@use "../../styles/mixins/" as m;
+
+.container {
+  position: relative;
+
+  .card {
+    @include m.card();
+  }
+
+  .backCard {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 1em;
+    right: 1em;
+    bottom: -0.5em;
+  }
+}

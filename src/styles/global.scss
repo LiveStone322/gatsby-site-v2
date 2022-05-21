@@ -1,6 +1,38 @@
 @use "./constants.scss" as c;
+@use "./functions" as f;
+@use "./mixins" as m;
 @import "./fonts/fonts.scss";
 
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 html {
-  font-family: 'OpenSans';
+  font-family: "OpenSans";
+  font-size: 16px;
+}
+
+body {
+  min-width: 300px;
+  @include m.fastFluidFontSize(0.75rem, 1rem);
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Oswald";
+    letter-spacing: -0.05em;
+  }
+
+  h1 {
+    @include m.fastFluidFontSize(2.5rem, 3rem);
+  }
+
+  h2 {
+    @include m.fastFluidFontSize(2rem, 2.5rem);
+  }
+
+  h3 {
+    @include m.fastFluidFontSize(1.5rem, 2rem);
+  }
 }

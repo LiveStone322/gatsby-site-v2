@@ -1,0 +1,6 @@
+@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
+  $k: calc(($f-max - $f-min) / ($v-max - $v-min));
+  $b: calc($f-min - $k * $v-min);
+
+  @return calc(#{$k} * 100vw + #{$b});
+}
