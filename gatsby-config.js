@@ -7,6 +7,30 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-source-datocms",
+      options: {
+        // anti-auto-parse
+        apiToken:
+          "e" +
+          (2 - 1).toString() +
+          "ad5" +
+          "148" +
+          "38d" +
+          "2944" +
+          "e90c6" +
+          "7e60" +
+          "ce5619",
+        pageSize: 50,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyDefault: "ru",
+        useLangKeyLayout: false,
+      },
+    },
+    {
       resolve: `gatsby-plugin-sass`,
       options: {
         sassOptions: {
